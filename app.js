@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 
 //MIDDLEWARE//
 app.use(bodyParser.urlencoded({extended:true}));
+app.set(express.static('public'));
 app.set('view engine', 'ejs');
 //ROUTING//
 app.get('/',function(req,res){
