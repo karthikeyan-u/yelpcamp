@@ -1,11 +1,8 @@
+<% include partials/header.ejs %>
+
 <%campgrounds.forEach(function(campground){%>
     <div><%=campground.name%></div>
-    <img src='<%=campground.image%>'>
+    <img class='img-thumbnail' src='<%=campground.image%>'>
 <% }); %>
-<div>
-<form method='POST' action='/newcampgrounds'>
-    <input type='text' placeholder='campground name' name='name'>
-    <input type='text' placeholder='campground imageURL' name='image'>
-    <button type='submit'>Add Campground</button>
-</form>
-</div>
+
+<% include partials/footer.ejs %>
